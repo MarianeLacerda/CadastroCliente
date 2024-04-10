@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de cliente"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto">
+    </TextView>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/foto_usuario"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:fontFamily="@font/roboto"
+            android:src="@drawable/user">
+        </ImageView>
+
+        <Button
+            android:id="@+id/btn_carregar_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carregar foto"
+            android:fontFamily="@font/roboto"
+            android:layout_gravity="center">
+        </Button>
+
+    </LinearLayout>
+    
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu nome"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto">
+    </EditText>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu email"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:inputType="textEmailAddress">
+    </EditText>
+
+    <EditText
+        android:id="@+id/idade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua idade"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:inputType="number">
+    </EditText>
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:inputType="textPassword">
+    </EditText>
+
+</LinearLayout>
