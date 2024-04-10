@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
     android:background="@color/white">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
     <TextView
@@ -65,7 +69,6 @@
         android:layout_height="wrap_content"
         android:hint="Digite seu email"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:textSize="20sp"
         android:fontFamily="@font/roboto"
@@ -78,7 +81,6 @@
         android:layout_height="wrap_content"
         android:hint="Digite sua idade"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:textSize="20sp"
         android:fontFamily="@font/roboto"
@@ -91,11 +93,113 @@
         android:layout_height="wrap_content"
         android:hint="Digite sua senha"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:textSize="20sp"
         android:fontFamily="@font/roboto"
         android:inputType="textPassword">
     </EditText>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexo"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="16dp">
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/sexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp">
+        
+        <RadioButton
+            android:id="@+id/masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:layout_marginEnd="16dp">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/feminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feminino"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold">
+        </RadioButton>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serviços"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="16dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/musculacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Musculação"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="16dp">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/crossfit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crossfit"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="16dp">
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/natacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Natação"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="16dp">
+    </CheckBox>
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/novidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receber novidades"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginStart="16dp">
+    </com.google.android.material.materialswitch.MaterialSwitch>
+    
+    <Button
+        android:id="@+id/cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar cliente"
+        android:textSize="20dp"
+        android:fontFamily="@font/roboto"
+        android:layout_margin="16dp">
+    </Button>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
