@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
             mostrarInfoEdt()
             mostrarInfoSexoRdb()
+            mostrarServicosContratados()
+            mostrarEscolhaNovidades()
 
         }
 
@@ -58,6 +60,34 @@ class MainActivity : AppCompatActivity() {
             Log.d("INFO_CLIENTE", "Sexo: não marcado")
         }
 
+    }
+
+    fun mostrarServicosContratados() {
+
+        val servicos = mutableListOf<String>()
+
+        if (binding.musculacao.isChecked) {
+            val musculacao = binding.musculacao.text.toString()
+            servicos.add(musculacao)
+        }
+
+        if (binding.crossfit.isChecked) {
+            val crossfit = binding.crossfit.text.toString()
+            servicos.add(crossfit)
+        }
+
+        if (binding.natacao.isChecked) {
+            val natacao = binding.natacao.text.toString()
+            servicos.add(natacao)
+        }
+
+        Log.d("INFO_CLIENTE", "Serviços: ${servicos}")
+
+    }
+
+    fun mostrarEscolhaNovidades() {
+        val escolha = binding.novidades.isChecked
+        Log.d("INFO_CLIENTE", "Receber novidades: ${escolha}")
     }
 
 }
